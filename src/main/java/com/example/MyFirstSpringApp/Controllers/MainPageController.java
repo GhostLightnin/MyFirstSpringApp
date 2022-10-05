@@ -13,9 +13,4 @@ public class MainPageController {
         return "home";
     }
 
-    @GetMapping("/blog")
-    public String blog(Model model) {
-        model.addAttribute("title", "Main Page");
-        return "home";
-    }
 }
