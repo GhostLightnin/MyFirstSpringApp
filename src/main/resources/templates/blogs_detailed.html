@@ -12,8 +12,10 @@
     <h1>Наш тестовый блог</h1>
     <div th:each="el : ${posts}" class="alert alert-info mt-2">
         <h3 th:text = "${el.title}"/>
-        <p th:text = "${el.annotation}"/>
-        <a th:href="'/blog/' + ${el.Id}" class="btn btn-warning">Подробнее</a>
+        <p th:text = "${el.text}"/>
+        <p th:text = "'Views:' + ${el.views}"/>
+        <a th:href="'/blog/' + ${el.Id} + '/edit'" class="btn btn-warning">Edit this blogpost</a>
+        <a th:href="'/blog/' + ${el.Id} + '/delete'" class="btn btn-warning">Delete this blogpost</a>
     </div>
 
 </div>

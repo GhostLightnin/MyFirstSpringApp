@@ -15,6 +15,15 @@ public class Blogpost {
     public String title, annotation, text;
     public int views;
 
+    public Blogpost(String title, String annotation, String text) {
+        this.title = title;
+        this.annotation = annotation;
+        this.text = text;
+    }
+
+    public Blogpost() {
+    }
+
     public Long getId() {
         return Id;
     }
@@ -46,6 +55,8 @@ public class Blogpost {
     public void setText(String text) {
         this.text = text;
     }
+
+
 
     public int getViews() {
         return views;

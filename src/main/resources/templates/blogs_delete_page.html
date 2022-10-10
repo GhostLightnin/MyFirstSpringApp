@@ -9,13 +9,15 @@
 <header th:insert="blocks/header :: header"></header>
 <!--<p th:text="'Hello, ' + ${title} + '!'" />-->
 <div class="container mt-5" >
-    <h1>Наш тестовый блог</h1>
-    <div th:each="el : ${posts}" class="alert alert-info mt-2">
-        <h3 th:text = "${el.title}"/>
-        <p th:text = "${el.annotation}"/>
-        <a th:href="'/blog/' + ${el.Id}" class="btn btn-warning">Подробнее</a>
-    </div>
-
+    <h1>Are you sure you want to delete this post?</h1>
+    <form method="post">
+        <div th:each="el : ${posts}" class="alert alert-info mt-2">
+            <h3 th:text = "${el.title}"/>
+            <p th:text = "${el.text}"/>
+            <p th:text = "'Views:' + ${el.views}"/>
+            <button type="submit" class="btn btn-warning">Delete this blogpost</button>
+        </div>
+    </form>
 </div>
 <div th:insert="blocks/footer :: footer"></div>
 </body>
